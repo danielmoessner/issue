@@ -1,0 +1,34 @@
+# See https://www.netlifycms.org/docs/configuration-options/#backend
+backend:
+  name: git-gateway
+  branch: main
+  repo: danielmoessner/bug-report
+
+# See https://www.netlifycms.org/docs/beta-features/#working-with-a-local-git-repository
+local_backend: true
+
+# See https://www.netlifycms.org/docs/configuration-options/#locale
+locale: en
+
+# See https://www.netlifycms.org/docs/configuration-options/#media-folder
+media_folder: /content/media
+
+# See https://www.netlifycms.org/docs/configuration-options/#public-folder
+public_folder: ../media
+
+# See https://www.netlifycms.org/docs/collection-types/
+collections:
+  - name: page
+    label: Pages
+    label_singular: Page
+    delete: false
+    editor:
+      preview: false
+    files:
+      - file: content/pages/home.yml
+        label: Homepage
+        name: home
+        fields:
+          - { label: Sammlung, name: collection, widget: hidden, default: page }
+          - { label: Slug, name: slug, widget: hidden, default: home }
+          - { label: Image, name: image, widget: image }
