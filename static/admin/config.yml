@@ -31,4 +31,5 @@ collections:
         fields:
           - { label: Sammlung, name: collection, widget: hidden, default: page }
           - { label: Slug, name: slug, widget: hidden, default: home }
-          - { label: Image, name: image, widget: image }
+          - { label: Image 1, name: image, widget: image }
+          - { label: Image 2, name: image2, widget: image }
